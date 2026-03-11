@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Photography</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">MICHAEL.</a>
+        <ul>
+            <li><a href="index.html">The work</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="contact.html">Say hello</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    <p class="section-title">Photography Collection</p>
+    
+    <div class="slider-container" style="margin: auto; display: flex; align-items: center; justify-content: center; min-height: 80vh;">
+    
+    <div class="slide" style="width: 1000px;">
+        <img src="Laura.jpg" class="quality-sharp">
+    </div>
+
+    <div class="slide" style="width: 900px;">
+        <img src="taylor.jpg" class="quality-sharp">
+    </div>
+
+    <div class="slide" style="width: 1000px;">
+        <img src="IMG_7104.jpg" class="quality-sharp">
+    </div>
+
+    <div class="slide" style="width: 800px;">
+        <img src="Cars.jpg" class="quality-sharp">
+    </div>
+
+    <div class="slide" style="width: 700px;">
+        <img src="Andrew1.jpg" class="quality-sharp">
+    </div>
+
+    <div class="slide" style="width: 700px;">
+        <img src="Jordan1.jpg" class="quality-sharp">
+    </div>
+
+    <div class="slide" style="width: 700px;">
+        <img src="Andrew2.jpg" class="quality-sharp">
+    </div>
+    
+    <div class="slide" style="width: 700px;">
+        <img src="IMG_7107.png" class="quality-sharp">
+    </div>
+    
+    <button class="nav-btn prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="plusSlides(1)">&#10095;</button>
+</div>
+
+    <script>
+        /* Same slider script as index.html */
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) { showSlides(slideIndex += n); }
+        function showSlides(n) {
+            let i; let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
